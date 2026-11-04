@@ -1,0 +1,67 @@
+.drilling-stage .page-head{padding:25px 30px;margin-bottom:22px}
+.drilling-stage .page-head h1{font-size:31px}
+.drilling-stage .page-head .blurb{margin-top:10px;font-size:16px;max-width:80ch}
+.drilling-workspace{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(390px,.9fr);gap:23px;align-items:start;margin-bottom:30px}
+.drilling-visual{border:1px solid #3e5a65;background:#102633;min-width:0;position:sticky;top:calc(var(--nav-h) + 16px)}
+.drill-view-head{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:20px 23px;border-bottom:1px solid #3c5963}
+.drill-view-head span,.drill-cases-heading>span{color:#d6aa80;font:12px/1.5 var(--mono);letter-spacing:.10em}
+.drill-view-head h2{font-size:21px;color:#e5ece1;margin-top:7px;line-height:1.45}
+.drill-back-map{font-size:14px;color:#abc6d0;white-space:nowrap}
+.drill-camera{height:510px;position:relative;overflow:hidden;background:#687b7c}
+.drill-camera canvas{display:block;width:100%;height:100%;cursor:grab;touch-action:pan-y}
+.drill-camera canvas:active{cursor:grabbing}
+.drill-view-label{position:absolute;left:18px;top:17px;padding:7px 12px;background:#0b2431d9;border:1px solid #d7e4db44;color:#edf1dc;font-size:15px;pointer-events:none}
+.drill-site-note{position:absolute;bottom:15px;right:17px;color:#e1e8db;font-size:12px;background:#0d253b88;padding:4px 8px;pointer-events:none}
+.drill-hotspot{position:absolute;pointer-events:none;width:22px;height:22px;border:2px solid #ffcd86;border-radius:50%;transform:translate(-50%,-50%);box-shadow:0 0 0 7px #f5ba6140,0 0 30px #e5a14d88}
+.drill-hotspot[hidden]{display:none}
+.drill-hotspot span{position:absolute;top:29px;left:-20px;white-space:nowrap;padding:7px 11px;background:#102731ed;color:#ffe0b7;border:1px solid #d1a371;font-size:14px}
+.drill-view-footer{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:14px 17px;border-top:1px solid #3b5762;flex-wrap:wrap}
+.drill-camera-controls{display:flex;gap:7px;flex-wrap:wrap}
+.drill-camera-controls button{font-size:14px;color:#aac7d1;padding:8px 11px;border:1px solid #3e5b69;background:#132f3e}
+.drill-camera-controls button[aria-pressed=true]{color:#ffd1a5;background:#423122;border-color:#c39467}
+.drill-camera-controls button:hover{border-color:#d5b18a;color:#f1ddbc}
+.drill-view-footer>span{font-size:13px;color:#84a7b6}
+.drill-linked-caption{padding:14px 20px;background:#0b2330;border-top:1px solid #35525e;color:#bbd0d6;font-size:15px;min-height:52px;line-height:1.6}
+.drilling-cases{min-width:0;border:1px solid #335360;background:#0d2330;padding:22px}
+.drill-cases-heading{padding-bottom:17px;border-bottom:1px solid #34505d;margin-bottom:18px}
+.drill-cases-heading h2{font-size:24px;margin-top:6px;color:#e5ece2;display:flex;justify-content:space-between;align-items:center;gap:14px}
+.drill-cases-heading b{font:500 30px var(--mono);color:#ffc18a}
+.drilling-cases .filters{padding:13px;gap:7px;margin-bottom:17px;flex-wrap:wrap}
+.drilling-cases .filters .lbl{font-size:13px}
+.drilling-cases .filters .divider{flex-basis:100%;width:0;height:0;margin:0}
+.drilling-cases .filters .chip{font-size:13px;padding:6px 9px}
+.drilling-cases .filters .count{font-size:13px;margin-left:auto}
+.drilling-cases .scenes{display:flex;flex-direction:column;gap:10px;padding-bottom:0}
+.drilling-cases .scene-row{display:flex;align-items:center;gap:12px;padding:16px!important;min-height:63px;border-radius:2px!important;position:relative}
+.drilling-cases .scene-row>div{min-width:0}
+.drilling-cases .sr-name{font-size:18px;line-height:1.5;padding-right:22px}
+.drilling-cases .scene-row:after{content:'↗';color:#e8b17d;position:absolute;right:15px;top:50%;transform:translateY(-50%);font-size:18px}
+.drilling-cases .scene-row:hover,.drilling-cases .scene-row.drill-linked{background:#223b45;border-color:#e5ac75}
+.field-map .field-atlas.is-drill-entering .field-topography{transform:scale(1.35) rotate(-3deg);transform-origin:var(--field-enter-x,38.75%) var(--field-enter-y,36.66%);opacity:.4;transition:transform .42s,opacity .42s}
+@media(min-width:2200px){.drilling-workspace{grid-template-columns:minmax(0,1.65fr) minmax(440px,.9fr)}}
+@media(max-width:1200px){.drilling-workspace{grid-template-columns:minmax(0,1fr) 390px;gap:17px}.drill-camera{height:470px}.drill-view-head{padding:17px;align-items:start;flex-direction:column}.drilling-cases{padding:17px}.drill-view-head h2{font-size:20px}}
+@media(max-width:1000px){.drilling-workspace{grid-template-columns:1fr}.drilling-visual{position:relative;top:auto}.drill-view-head{flex-direction:row;align-items:center}.drill-camera{height:480px}.drilling-cases .scenes{display:grid;grid-template-columns:1fr 1fr}.drilling-cases .filters .divider{flex-basis:auto;width:1px;height:15px}.drilling-cases .filters .chip{font-size:14px}}
+@media(max-width:600px){.drilling-stage .page-head{padding:22px 18px}.drilling-stage .page-head h1{font-size:27px}.drill-view-head{flex-direction:column;align-items:start;gap:10px}.drill-camera{height:390px}.drill-view-head h2{font-size:20px}.drilling-cases .scenes{grid-template-columns:1fr}.drilling-cases .sr-name{font-size:18px}.drill-cases-heading h2{font-size:22px}.drill-camera-controls button{font-size:14px;padding:8px}.drill-site-note{font-size:11px}.drill-hotspot span{max-width:180px;white-space:normal;font-size:13px}.drilling-stage .ph-stat{padding-top:15px}}
+@media(prefers-reduced-motion:reduce){.field-map .field-atlas.is-drill-entering .field-topography{transition:none;transform:none;opacity:1}}
+
+.drilling-cases .scene-row{margin:0!important;min-height:54px;padding:13px 15px!important}
+.drilling-cases .scenes{gap:8px}
+.drilling-cases .sr-name{font-size:17px}
+.drilling-cases .filters{margin-bottom:14px}
+
+/* 精细工区展示：场景、设备特征与镜头操作组成同一展台。 */
+.drilling-workspace{grid-template-columns:minmax(0,1.7fr) minmax(370px,.85fr);gap:20px}
+.drilling-visual{background:#0b2231;box-shadow:0 18px 60px #0005;border-color:#466577;overflow:hidden}
+.drill-view-head{background:linear-gradient(120deg,#163647,#0b2231);position:relative;padding:21px 23px 18px;flex-wrap:wrap;gap:10px 20px}
+.drill-view-head>div:first-child{flex:1}.drill-view-head h2{font-size:25px;letter-spacing:.01em;margin:5px 0 0;font-weight:650}.drill-view-head>div>span{font-size:12px;color:#e8b47f;letter-spacing:.12em}.drill-back-map{font-size:14px}
+.field-scene-profile{flex-basis:100%;display:flex;gap:17px;margin-top:2px}.field-scene-profile span{font-size:13px!important;color:#a6c2cf!important;letter-spacing:.03em!important;display:flex;align-items:center;gap:7px}.field-scene-profile span:before{content:'';display:inline-block;width:4px;height:4px;background:#dfaa72;transform:rotate(45deg)}
+.drill-camera{height:560px;background:#101f31;isolation:isolate}.drill-camera:before{content:'';position:absolute;inset:0;box-shadow:inset 0 0 85px #06142340;pointer-events:none;z-index:1}.drill-camera:after{content:'';position:absolute;inset:14px;border:1px solid #c3dce518;pointer-events:none;z-index:1;clip-path:polygon(0 0,35px 0,35px 1px,1px 1px,1px 35px,0 35px,0 0,100% 0,100% 35px,calc(100% - 1px) 35px,calc(100% - 1px) 1px,calc(100% - 35px) 1px,calc(100% - 35px) 0,100% 0,100% 100%,calc(100% - 35px) 100%,calc(100% - 35px) calc(100% - 1px),calc(100% - 1px) calc(100% - 1px),calc(100% - 1px) calc(100% - 35px),100% calc(100% - 35px),100% 100%,0 100%,0 calc(100% - 35px),1px calc(100% - 35px),1px calc(100% - 1px),35px calc(100% - 1px),35px 100%,0 100%)}
+.drill-view-label{top:22px;left:23px;background:#0a2232c9;color:#ecf0e8;border:1px solid #a4c6d24a;font-size:13px;padding:7px 12px;backdrop-filter:blur(8px);z-index:2}.drill-view-label:before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:#f3ba7d;margin-right:8px;box-shadow:0 0 10px #ffc688}
+.field-scene-signature{position:absolute;left:24px;bottom:21px;display:grid;gap:4px;pointer-events:none;z-index:2;text-shadow:0 1px 8px #001322}.field-scene-signature b{font:500 13px/1.4 var(--mono);color:#e6d4b4;letter-spacing:.2em}.field-scene-signature span{font-size:12px;color:#c3d4da;letter-spacing:.08em}.drill-site-note{z-index:2;bottom:22px;right:24px;font-size:11px;letter-spacing:.04em;background:#061d2bb3;padding:6px 9px}
+.drill-hotspot{z-index:4}.drill-hotspot span{box-shadow:0 5px 25px #00131d80}
+.drill-view-footer{padding:13px 17px;background:#102b3b;border-color:#426070;gap:9px 14px}.drill-camera-controls button{font-size:14px;padding:8px 12px}.drill-camera-controls button[aria-pressed=true]{background:#c78e56;border-color:#e5b37f;color:#0a1c29;font-weight:650}.drill-view-footer>span{font-size:12px}.field-scene-tools{flex-basis:100%;display:flex;gap:6px;flex-wrap:wrap;padding-top:9px;border-top:1px solid #acc7d21c}.field-scene-tools button{font-size:13px;padding:6px 11px;min-height:30px;background:#0d2534;border:1px solid #365569;color:#aecbd7}.field-scene-tools button[aria-pressed=true]{border-color:#8caebd;color:#ebceab}.field-scene-tools button:nth-last-child(2){margin-left:auto}
+.drill-linked-caption{font-size:14px;padding:12px 19px;background:#0a202e;min-height:48px}.drilling-cases{background:linear-gradient(145deg,#122f3e,#0c2230)}
+.drilling-workspace.scene-expanded{grid-template-columns:1fr}.scene-expanded .drilling-visual{position:relative;top:auto}.scene-expanded .drill-camera{height:min(70vh,810px);min-height:480px}.scene-expanded .drilling-cases .scenes{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}.scene-expanded .drilling-cases .filters .divider{flex-basis:auto;width:1px;height:14px}
+@media(max-width:1200px){.drilling-workspace{grid-template-columns:minmax(0,1fr) 370px;gap:17px}.drill-camera{height:520px}.drill-view-head h2{font-size:23px}.drill-view-head{flex-direction:row;align-items:center}.field-scene-profile{gap:12px}}
+@media(max-width:1000px){.drilling-workspace{grid-template-columns:1fr}.drill-camera{height:540px}.drilling-visual{position:relative;top:auto}.scene-expanded .drilling-cases .scenes{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.drill-view-head{padding:17px;align-items:start}.drill-view-head h2{font-size:22px}.field-scene-profile{gap:9px;flex-wrap:wrap}.field-scene-profile span{font-size:12px!important}.drill-camera{height:410px}.drill-view-label{top:19px;left:19px}.field-scene-signature{left:19px;bottom:19px}.field-scene-signature b{font-size:11px}.field-scene-signature span{font-size:11px}.drill-site-note{right:18px;bottom:19px;font-size:10px;max-width:45%;text-align:right}.drill-view-footer{padding:11px}.drill-camera-controls{gap:5px}.drill-camera-controls button{font-size:13px;padding:7px 9px}.field-scene-tools button{font-size:12px;padding:6px 8px}.scene-expanded .drill-camera{min-height:410px;height:62vh}.scene-expanded .drilling-cases .scenes{grid-template-columns:1fr}}

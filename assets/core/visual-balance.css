@@ -1,0 +1,19 @@
+/* 数据可视化采用固定阅读尺度：画布有上限，标签与图例独立保持可读。 */
+:root{--type-map-label:24px}
+.field-map .field-head,.field-map .fm-zone-tabs,.field-map .field-atlas{max-width:1280px;margin-inline:auto}
+.field-topography{min-width:1000px}
+.fm-map-footer,.field-map-tools button{font-size:17px}
+.fm-zone-tabs button{font-size:19px}
+.fm-zone-tabs button>span,.fm-zone-tabs button>b{font-size:15px}
+.method-map .method-map-heading,.method-map .method-flow-layout{max-width:1440px;margin-inline:auto}
+.method-flow-layout{grid-template-columns:minmax(0,1fr) 330px}
+.method-flow-svg{min-width:840px;max-width:960px;margin-inline:auto}
+.method-flow-figure figcaption{font-size:17px!important;line-height:1.75}
+.method-flow-detail{max-height:780px}
+.method-flow-detail .flow-scene-list li{font-size:18px!important}
+.method-flow-detail .flow-scene-list h4{font-size:19px}
+.diagram-scroll svg{width:1080px!important;min-width:1080px!important;max-width:1080px!important;max-height:none;margin-inline:auto}
+.diagram-scroll svg text[font-size="8"],.diagram-scroll svg text[font-size="9"],.diagram-scroll svg text[font-size="10"]{font-size:11px}
+.diagram-scroll+figcaption{font-size:16px!important;line-height:1.7;padding:9px 0}
+@media(max-width:1100px){.method-flow-layout{grid-template-columns:1fr}.method-flow-detail{max-height:430px}}
+@media(max-width:800px){:root{--type-map-label:20px}.fm-zone-tabs button{font-size:17px}.fm-map-footer,.field-map-tools button{font-size:16px}.method-flow-figure figcaption{font-size:16px!important}.method-flow-detail .flow-scene-list li{font-size:17px!important}}

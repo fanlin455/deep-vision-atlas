@@ -1,0 +1,43 @@
+/* 三个部分共享阅读层级：标题24、卡片20、正文/操作16、辅助14。 */
+.scene-workspace .dh-title{font-size:32px;line-height:1.35;font-weight:650}
+.scene-workspace .dh-sub{font-size:17px;line-height:1.8}
+.scene-workspace .sec4:has(.story-figure) h3,.story-flow-heading h3{font-size:24px;line-height:1.45;font-weight:650}
+.visual-step h4{font-size:20px;line-height:1.5;font-weight:600}
+.visual-step h4>span{font-size:18px}.visual-step h4>small{font-size:14px}
+.story-figure figcaption{font-size:14px!important;line-height:1.7}
+.story-figure svg text{font-weight:500}
+.story-figure svg :is(path,polyline,line,rect,circle,ellipse){vector-effect:non-scaling-stroke}
+.story-flow-heading>span,.story-notes>summary,.visual-step .story-notes>summary{font-size:16px}
+.story-notes>p,.visual-step .story-notes>p{font-size:16px;line-height:1.85}
+.scene-workspace>[data-panel=bg].on:has(.story-figure){display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+.scene-workspace [data-panel=bg]:has(.story-figure)>.sec4{padding:0;border:0;min-width:0;margin:0}
+.scene-workspace [data-panel=bg] .story-figure svg{min-width:900px!important}
+:root[data-reading-columns="2"] .scene-workspace>[data-panel=bg].on:has(.story-figure){grid-template-columns:repeat(2,minmax(0,1fr))}
+:root[data-reading-columns="4"] .scene-workspace>[data-panel=bg].on:has(.story-figure){grid-template-columns:repeat(4,minmax(0,1fr))}
+:root[data-reading-columns="2"] [data-panel=bg] .story-figure svg,:root[data-reading-columns="4"] [data-panel=bg] .story-figure svg{min-width:0!important}
+.scene-workspace>#tabs.tabs{padding:6px;gap:4px;border-radius:11px;box-shadow:0 8px 30px #0007}
+.scene-workspace>#tabs.tabs .tab{font-size:17px;font-weight:500;min-width:160px;min-height:52px;padding:11px 17px;gap:10px;line-height:1.4}
+.scene-workspace>#tabs.tabs .tab.on{font-weight:650}
+.scene-workspace>#tabs.tabs .tab .num{font-size:12px;letter-spacing:.04em}
+.visual-lab{font-size:16px;line-height:1.8}
+.visual-lab header h1{font-size:30px;line-height:1.4}
+.visual-lab .view h2{font-size:20px;line-height:1.5;font-weight:600}
+.visual-lab .readouts span{font-size:15px;line-height:1.6}
+.visual-lab .readouts b{font-size:28px;line-height:1.6}
+.visual-lab .readouts small,.visual-lab .readouts em{font-size:14px}
+.visual-lab .legend,.visual-lab .caption,.visual-lab .chart-key,.visual-lab .raster-scale,.visual-lab .selection,.visual-lab .detail{font-size:16px;line-height:1.75}
+.visual-lab .lab-jumps button,.visual-lab .lab-console-drawer>summary,.visual-lab .lab-disclosure>summary{font-size:16px}
+.visual-lab .lab-console .preset button,.visual-lab .lab-console .sliders label,.visual-lab .lab-console .sliders output,.visual-lab .lab-console .actions button,.visual-lab .lab-console .actions #run{font-size:16px;line-height:1.55}
+.visual-lab .lab-console .sliders small,.visual-lab #status,.visual-lab .visual-status,.visual-lab .lab-console-drawer>summary>span{font-size:14px;line-height:1.7}
+.visual-lab .lab-console .lab-method-map h2{font-size:17px;line-height:1.6}
+.visual-lab .lab-method-triptych b{font-size:14px;line-height:1.6}
+.visual-lab .lab-method-triptych i{display:block;margin:0 0 2px}
+.visual-lab .lab-method-triptych i,.visual-lab .lab-method-hint{font-size:12px}
+.visual-lab .lab-disclosure p,.visual-lab .comparison p,.visual-lab .comparison table{font-size:16px;line-height:1.85}
+.visual-lab .comparison h2{font-size:22px}
+.visual-lab .chart .raster-wrap:not(.raster-strip){max-width:min(100%,calc(300px * var(--raster-ratio,1)))!important}
+@media(max-width:1100px){.visual-lab .lab-console .sliders{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.scene-workspace .dh-title{font-size:27px}.scene-workspace .sec4:has(.story-figure) h3,.story-flow-heading h3{font-size:23px}.visual-step h4{font-size:20px}.scene-workspace>#tabs.tabs .tab{font-size:15px;min-width:0;min-height:50px;gap:5px;padding:10px 5px}.scene-workspace>#tabs.tabs .tab .num{font-size:11px}.visual-lab header h1{font-size:26px}.visual-lab .view h2{font-size:20px}.visual-lab .lab-console .sliders{grid-template-columns:1fr}.visual-lab .lab-jumps button{font-size:15px}.visual-lab .lab-console-drawer>summary{font-size:15px}.visual-lab .lab-console-drawer>summary>span{float:none;display:block;margin-top:3px}.visual-lab .lab-method-triptych b{font-size:14px}}
+main.scene-workspace:has(>[data-panel=demo].on .workbench-frame){width:calc(100% - 24px)}
+.scene-workspace>[data-panel=demo]:has(.workbench-frame){padding:8px;background:transparent;border-color:transparent}
+.workbench-frame{border:0!important;border-radius:0!important;width:100%;display:block}

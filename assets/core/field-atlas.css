@@ -1,0 +1,44 @@
+/* 油田俯视场景：地形、道路、井场、罐区和工艺设施共用一张矢量画布。 */
+.field-map .field-head{align-items:end;margin-bottom:25px}
+.field-map .field-map-tools{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.field-map-tools button{color:#b8cfc7;background:transparent;border:1px solid #6c989155;padding:10px 15px;font:500 15px/1.4 var(--sans);cursor:pointer}
+.field-map-tools button:hover{border-color:#b6d5cd;color:#f5f7df}
+.fm-zone-tabs{display:flex;gap:10px;margin:0 0 18px;flex-wrap:wrap}
+.fm-zone-tabs button{display:flex;align-items:center;gap:16px;background:#102a30;border:1px solid #92b6ad33;border-top:2px solid var(--zone-color);color:#d7e7de;padding:13px 19px;font:650 18px/1.4 var(--sans);cursor:pointer;transition:background .18s,border-color .18s}
+.fm-zone-tabs button>span{font:500 12px var(--mono);color:var(--zone-color)}
+.fm-zone-tabs button>b{font:500 14px var(--mono);color:#98b1a8;border-left:1px solid #6c8d8155;padding-left:15px}
+.fm-zone-tabs button:hover,.fm-zone-tabs button[aria-pressed=true]{background:#24423f;border-color:var(--zone-color);color:#fff5dc}
+.field-atlas{border:1px solid #547e7c66;position:relative;overflow:hidden;background:#102b31;box-shadow:0 28px 80px #0003}
+.field-map-viewport{overflow-x:auto;overflow-y:hidden;max-width:100%;scrollbar-color:#6b9b97 #112c31;scrollbar-width:thin;overscroll-behavior-x:contain}
+.field-topography{width:100%;height:auto;min-width:1120px;display:block;font-family:var(--sans);isolation:isolate}
+.fm-cartography,.fm-zone-label{pointer-events:none}
+.field-stage{outline:none;cursor:pointer;pointer-events:bounding-box;transition:opacity .18s}
+.fm-leader{fill:none;stroke:var(--zone-color);stroke-width:1;opacity:.6}
+.fm-marker-ring{fill:var(--zone-color);fill-opacity:.1;stroke:var(--zone-color);stroke-width:1.5}
+.fm-marker{fill:#fff6d5;stroke:var(--zone-color);stroke-width:2}
+.fm-label-bg{fill:#0a2029;fill-opacity:.95;stroke:var(--zone-color);stroke-opacity:.5;stroke-width:1}
+.fm-label-accent{fill:var(--zone-color)}
+.fm-stage-name{fill:#edf4e7;font-size:24px;font-weight:650}
+.fm-stage-arrow{fill:none;stroke:var(--zone-color);stroke-width:1.5}
+.field-stage:hover .fm-label-bg,.field-stage:focus-visible .fm-label-bg{fill:#28494b;stroke:#fff0cb;stroke-width:2}
+.field-stage:hover .fm-marker-ring,.field-stage:focus-visible .fm-marker-ring{fill-opacity:.4;stroke-width:3;r:20px}
+.field-stage:hover .fm-leader,.field-stage:focus-visible .fm-leader{stroke-width:2;opacity:1}
+.field-stage:focus-visible .fm-stage-name{fill:#fffbcf}
+.fm-zone-label{transition:opacity .18s}
+.field-topography .fm-muted{opacity:.27}
+.field-topography .fm-active .fm-label-bg{stroke-opacity:1}
+.fm-pipe-flow{animation:fm-flow 4s linear infinite}
+.fm-survey-sweep{transform-origin:220px 340px;animation:fm-sweep 18s linear infinite}
+.field-atlas.is-paused *,.field-atlas.is-offscreen *,.field-atlas.is-hidden *{animation-play-state:paused!important}
+.fm-map-footer{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 22px;background:#0b232b;border-top:1px solid #7ea29a33;color:#a6c4b8;font-size:15px;line-height:1.5}
+.fm-pan-hint{display:none;color:#7daba6;font-size:13px}
+.field-map-viewport:focus-visible,.fm-zone-tabs button:focus-visible,.field-map-tools button:focus-visible{outline:3px solid #ffbc79;outline-offset:4px}
+@keyframes fm-flow{to{stroke-dashoffset:-116}}
+@keyframes fm-sweep{to{transform:rotate(360deg)}}
+@media(max-width:1200px){.fm-pan-hint{display:block}.field-map .field-head{align-items:start}}
+@media(max-width:800px){.fm-zone-tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px}.fm-zone-tabs button{padding:11px 13px;font-size:17px;gap:10px}.fm-zone-tabs button>b{margin-left:auto;font-size:13px;padding-left:10px}.fm-map-footer{padding:14px 15px;flex-wrap:wrap;font-size:14px}.field-map-tools button{font-size:14px;padding:9px 12px}.field-map .field-head{gap:17px}.field-map .field-head h2{line-height:1.35}.fm-pan-hint{display:block}}
+@media(max-width:360px){.fm-zone-tabs button{font-size:15px;gap:8px;padding:10px}.fm-zone-tabs button>span{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.field-stage,.fm-zone-label,.fm-zone-tabs button{transition:none}}
+
+@media(max-width:480px){.atlas-immersive .field-map .field-head h2{font-size:24px}}
+@media(max-width:360px){.atlas-immersive .field-map .field-head h2{font-size:22px}}

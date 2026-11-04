@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>深地智境</title>
+<meta name="description" content="按石油作业链条逐环节展示可被深度学习改造的候选场景，标注 AI 介入点、数据条件与难度等级；带可运行的案例示范。">
+
+<link rel="stylesheet" href="assets/core/tokens.css?v=342cf33930a3">
+<link rel="stylesheet" href="assets/core/layout.css?v=50ebb959e0c3">
+<link rel="stylesheet" href="assets/core/ui.css?v=e6f9c9d52285">
+<link rel="stylesheet" href="assets/core/atlas-modern.css?v=4b2fe0c41042"><link rel="stylesheet" href="assets/core/hero-showcase.css?v=bfd9383c7ddd"><link rel="stylesheet" href="assets/core/field-atlas.css?v=1c69965e62d0"><link rel="stylesheet" href="assets/core/typography.css?v=a3e44f5db6d7"><link rel="stylesheet" href="assets/core/site-theme.css?v=c8403ecc558a"><link rel="stylesheet" href="assets/core/visual-balance.css?v=055d3d6280e7"><link rel="stylesheet" href="assets/core/responsive-layout.css?v=aa645f9584f3"><script src="assets/core/responsive-layout.js?v=fba306788562"></script><link rel="stylesheet" href="assets/core/drilling-stage.css?v=667e18cecf78"><link rel="stylesheet" href="assets/core/case-layout.css?v=bae77442cafb"><link rel="stylesheet" href="assets/core/visual-story.css?v=abb09c62ab04"><link rel="stylesheet" href="assets/core/case-reading.css?v=5a3bd99c80a9"></head>
+<body>
+
+<div id="view">
+  <main class="wrap" style="padding:120px 0">
+    <div class="empty"><b>正在加载</b>如果这行字一直不消失，说明脚本没有正确执行，
+    请检查浏览器控制台。</div>
+  </main>
+</div>
+
+<noscript>
+  <div class="wrap" style="padding:80px 0">
+    <div class="empty"><b>需要启用 JavaScript</b>本站是纯前端渲染的，所有页面由本地脚本生成。</div>
+  </div>
+</noscript>
+
+<!-- =========================================================
+     脚本加载顺序（改这里之前先读 docs/如何添加新案例.md）
+     1. data.js         场景元数据
+     2. registry.js     案例注册表
+     3. kit.js          渲染工具箱
+     4. cases/*         案例插件 —— 新增案例加在这一段
+     5. case-demo-host  示范宿主（整页 iframe / 模块 Shadow DOM）
+     6. case-upload     案例包导入（读 localStorage，必须在 shell 前）
+     7. shell.js        外壳，必须最后
+     ========================================================= -->
+<script src="assets/data.js?v=da919d1f98a9"></script>
+<script src="assets/core/registry.js?v=8f05258ab177"></script>
+<script src="assets/core/kit.js?v=617d84843cad"></script>
+
+<script src="assets/cases/welllog-layer.case.js?v=aa77d965f07a"></script>
+<script src="assets/cases/welllog-layer.demo.js?v=cda5c3883fe9"></script>
+<!-- ↑ 新案例加在这里：<script src="assets/cases/你的案例.case.js"></script> -->
+
+<!-- 上传的案例包（localStorage）在这里恢复注册，必须在 shell.js 之前 -->
+<script src="assets/core/case-demo-host.js?v=b714731358d5"></script>
+<script src="assets/core/reference-compat.js?v=687f23ee3d21"></script>
+<script src="assets/core/case-upload.js?v=7e6591bdbd07"></script>
+
+<script src="assets/core/admin.js?v=25abed505810"></script>
+
+<script src="assets/cases/submission.case.js?v=53d405d1c8ea"></script>
+<script src="assets/core/shell.js?v=cf07dbf7e79e"></script>
+
+<script src="assets/core/jszip.min.js?v=f12f367798e3"></script><script src="assets/core/zip-import.js?v=107d99b56306"></script><script src="assets/core/enhance.js?v=d10f1e54874f"></script><script src="assets/core/review.js?v=57af353145b8"></script><script src="assets/core/field-detail.js?v=57bccdac3e24"></script><script src="assets/core/field-map.js?v=561b16497f39"></script><script src="assets/core/method-map.js?v=8bbf42f8b84b"></script><script src="assets/core/hero-wavefield.js?v=b8c109173e11"></script><script src="assets/core/hero-showcase.js?v=47ed6ec9f074"></script><script src="assets/core/site-style.js?v=aeabc6222d94"></script><script src="assets/core/three-vendor.js?v=73708dd5fd15"></script><script src="assets/core/field-scene-catalog.js?v=a9eef6bc4c79"></script><script src="assets/core/field-panorama.js?v=92b64bff4423"></script><script src="assets/core/field-models.js?v=7644976f595b"></script><script src="assets/core/field-world.js?v=37306292ba66"></script><script src="assets/core/drilling-stage.js?v=5fe9d2c234d6"></script><script src="assets/core/reading-scale.js?v=5ea60c74acb3"></script></body>
+</html>

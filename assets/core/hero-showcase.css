@@ -1,0 +1,82 @@
+/* 动态地球物理概念画面，满宽布局和可读的顶部导航。 */
+body.atlas-immersive{background:#070f19;--nav-h:96px}
+body.atlas-immersive:before,body.atlas-immersive:after{display:none}
+.atlas-immersive .hdr{background:#070f19f5;border-color:#9fcfc72e;color:#edf4df}
+.atlas-immersive .hdr-in{width:100%;max-width:none;padding:0 3.5vw;min-height:96px;height:auto;gap:28px}
+.atlas-immersive .brand{gap:15px}
+.atlas-immersive .brand-mark{width:48px;height:48px;border-radius:50%;background:#153f3c;border:1px solid #9ee7c455}
+.atlas-immersive .brand-mark svg{width:25px;height:25px}
+.atlas-immersive .brand-txt b{color:#edf5e5;font-size:clamp(24px,1.35vw,40px);font-weight:750}
+.atlas-immersive .brand-txt span{color:#8eb6aa;font-size:12px;letter-spacing:.26em;margin-top:7px}
+.atlas-immersive .nav{gap:5px}
+.atlas-immersive .nav a{color:#bbd1c8;font-size:clamp(17px,.95vw,28px);padding:12px 14px}
+.atlas-immersive .nav a.on{color:#ffc18c}
+.atlas-immersive .nav a.on:after{background:#ffc18c}
+.atlas-immersive .nav .nav-add{font:650 clamp(17px,.95vw,28px)/1.4 var(--sans);background:#ff9a50;border-color:#ff9a50;color:#112a22;border-radius:0;padding:13px 19px}
+.hero.hero--expedition{padding:0;position:relative;isolation:isolate;width:100%;max-width:none}
+.hero--expedition .expedition-hero.hero-main{width:100%;max-width:none;min-height:820px;height:calc(100svh - 96px);margin:0;padding:0;border:0;border-radius:0;overflow:hidden;position:relative;background:#070f19!important;box-shadow:none;color:#f0f7e8}
+.hero--expedition .expedition-hero:before,.hero--expedition .expedition-hero:after{display:none}
+.hero--expedition .expedition-art{display:block;position:absolute;inset:0;width:100%;height:100%;z-index:1;max-width:none;pointer-events:none;opacity:1}
+.hero--expedition .expedition-shade{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(90deg,#070f19fc 0%,#070f19dc 24%,#070f1930 45%,transparent 62%),linear-gradient(0deg,#070f19 0%,#070f1930 16%,transparent 35%)}
+.hero--expedition .expedition-copy{position:relative;z-index:3;padding:clamp(65px,9vh,170px) 0 220px 3.5vw;max-width:57%;pointer-events:none;animation:expedition-enter .9s cubic-bezier(.2,.7,.2,1) both}
+.hero--expedition .expedition-eyebrow{display:flex;align-items:center;gap:13px;color:#98c9be;font:600 clamp(12px,.85vw,22px)/1.5 var(--mono);letter-spacing:.18em;margin-bottom:36px}
+.hero--expedition .expedition-eyebrow i{width:7px;height:7px;display:block;background:#7af5da;border-radius:50%;box-shadow:0 0 18px #7af5da}
+.hero--expedition h1{max-width:none;margin:0;white-space:normal;font-size:clamp(51px,4.65vw,165px);line-height:1.2;letter-spacing:-.055em;font-weight:900;color:#f1f4e6;text-wrap:initial}
+.hero--expedition h1>span{display:block;white-space:nowrap}
+.hero--expedition h1 em{display:block;white-space:nowrap;color:#ff9a50;font-size:1.66em;line-height:1.14;margin-top:6px;font-weight:900;font-style:normal;text-shadow:0 8px 80px #ff771238;letter-spacing:-.065em;transform:skew(-4deg);transform-origin:left center;background:linear-gradient(110deg,#ffdfaa 5%,#ff9a50 42%,#ff6b36 75%,#ffdb9a 98%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero--expedition h1 em:after{display:none}
+.hero--expedition .expedition-lead{color:#bed1c8;font-size:clamp(19px,1.2vw,32px)!important;line-height:1.75;max-width:none;margin:28px 0 0;letter-spacing:.06em}
+.hero--expedition .expedition-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:34px;pointer-events:auto}
+.hero--expedition .expedition-actions button{font:650 clamp(16px,1vw,26px)/1.4 var(--sans);border-radius:0;padding:17px 23px;cursor:pointer;display:flex;align-items:center;gap:30px;min-height:62px;transition:transform .18s,background .18s,border-color .18s}
+.hero--expedition .expedition-primary{border:1px solid #ffab65;background:#ffab65;color:#11271b;box-shadow:0 0 35px #b7f7511a}
+.hero--expedition .expedition-primary span{display:grid;place-items:center;width:28px;height:28px;background:#183421;color:#ff9a50;border-radius:50%;font-size:19px}
+.hero--expedition .expedition-secondary{background:#070f1999;color:#edf4da;border:1px solid #8fa77b88;backdrop-filter:blur(8px)}
+.hero--expedition .expedition-secondary span{font-size:24px;color:#ff9a50}
+.hero--expedition .expedition-actions button:hover{transform:translateY(-4px);background:#edffbc;color:#142918}
+.hero--expedition .expedition-actions button:focus-visible,.hero--expedition .expedition-motion:focus-visible{outline:3px solid #fff;outline-offset:6px}
+.hero--expedition .expedition-art-note{position:absolute;z-index:3;top:28px;right:3.5vw;color:#9cbeb5;font:clamp(13px,.8vw,22px)/1.5 var(--sans);letter-spacing:.05em;display:flex;gap:15px;align-items:center}
+.hero--expedition .expedition-art-note span{border-left:1px solid #83b4a855;padding-left:15px;color:#7d9e96;font-size:.85em}
+.hero--expedition .expedition-signal{position:absolute;z-index:3;right:5vw;bottom:180px;display:flex;align-items:center;gap:20px;color:#c8e4d3;font-size:clamp(17px,1.05vw,28px);letter-spacing:.12em}
+.hero--expedition .expedition-signal b{font-size:20px;color:#698f82;font-weight:400}
+.hero--expedition .expedition-signal i{width:7px;height:7px;border-radius:50%;background:#b7f68b;box-shadow:0 0 15px #b7f68b}
+.hero--expedition .expedition-bottom{position:absolute;z-index:3;left:3.5vw;right:3.5vw;bottom:31px;display:flex;justify-content:space-between;align-items:center;padding-top:26px;border-top:1px solid #adc78744;gap:20px}
+.hero--expedition .expedition-stats{display:flex;gap:clamp(38px,4.5vw,120px);align-items:center}
+.hero--expedition .expedition-stats>div{display:flex;align-items:baseline;gap:14px}
+.hero--expedition .expedition-stats b{color:#ffc18c;font:500 clamp(43px,3.8vw,110px)/1 var(--mono);letter-spacing:-.06em}
+.hero--expedition .expedition-stats span{font-size:clamp(15px,.95vw,27px);color:#a6c4b4;white-space:nowrap}
+.hero--expedition .expedition-motion{display:flex;align-items:center;gap:22px;color:#b8d2c2;font:500 clamp(15px,.9vw,23px)/1.5 var(--sans);padding:12px 18px;border:1px solid #9cbe9c55;background:#0b252980;cursor:pointer;white-space:nowrap}
+.hero--expedition .expedition-motion:hover{color:#edffc7;border-color:#ff9a50}
+.hero--expedition .expedition-motion span{color:#ffc895;font-size:22px}
+@media(min-width:2200px){.hero--expedition .expedition-copy{padding-top:10vh}.hero--expedition .expedition-hero.hero-main{min-height:1000px}}
+@media(max-width:1150px){.atlas-immersive .hdr-in{padding:14px 3vw;flex-wrap:wrap;gap:14px;justify-content:space-between}.atlas-immersive .brand-txt b{font-size:24px}.atlas-immersive .nav a{font-size:17px;padding:10px}.atlas-immersive .nav .nav-add{padding:10px 13px}.hero--expedition .expedition-copy{max-width:68%}.hero--expedition h1{font-size:5.3vw}.hero--expedition .expedition-signal{bottom:160px}.hero--expedition .expedition-stats{gap:30px}.hero--expedition .expedition-stats>div{flex-direction:column;gap:8px}}
+@media(max-width:800px){body.atlas-immersive{--nav-h:150px}.atlas-immersive .hdr-in{padding:15px 20px 12px;gap:15px}.atlas-immersive .brand-mark{width:40px;height:40px}.atlas-immersive .brand-txt b{font-size:23px}.atlas-immersive .brand-txt span{font-size:10px;margin-top:5px}.atlas-immersive .nav{margin-left:0;width:100%;justify-content:space-between;gap:0}.atlas-immersive .nav .nav-add{margin-left:0}.atlas-immersive .nav a{font-size:16px;padding:8px 7px}.atlas-immersive .nav .nav-add{padding:8px 11px;font-size:16px}.hero--expedition .expedition-hero.hero-main{height:990px;min-height:990px}.hero--expedition .expedition-copy{padding:40px 24px 0;max-width:none}.hero--expedition h1{font-size:clamp(35px,7.1vw,56px)}.hero--expedition h1 em{font-size:1.4em}.hero--expedition .expedition-eyebrow{font-size:11px;margin-bottom:25px}.hero--expedition .expedition-lead{font-size:18px!important;margin-top:22px}.hero--expedition .expedition-actions{margin-top:25px;gap:12px}.hero--expedition .expedition-actions button{font-size:15px;padding:12px 16px;gap:17px;min-height:52px}.hero--expedition .expedition-shade{background:linear-gradient(180deg,#070f1999 0%,transparent 48%,transparent 65%,#070f19 92%)}.hero--expedition .expedition-art-note{top:auto;bottom:205px;left:24px;right:auto;font-size:13px}.hero--expedition .expedition-signal{display:none}.hero--expedition .expedition-bottom{left:24px;right:24px;bottom:26px;flex-wrap:wrap;padding-top:24px;gap:22px}.hero--expedition .expedition-stats{width:100%;justify-content:space-between;gap:16px}.hero--expedition .expedition-stats>div{flex-direction:column;gap:9px}.hero--expedition .expedition-stats b{font-size:42px}.hero--expedition .expedition-stats span{font-size:13px}.hero--expedition .expedition-motion{font-size:13px;padding:7px 13px;min-height:38px;margin-left:auto}}
+@media(max-width:480px){.atlas-immersive .brand-txt b{font-size:21px}.atlas-immersive .brand{gap:10px}.atlas-immersive .nav a{font-size:14px;padding:8px 5px}.atlas-immersive .nav .nav-add{padding:8px;font-size:14px}.hero--expedition .expedition-hero.hero-main{height:900px;min-height:900px}.hero--expedition .expedition-copy{padding:36px 20px 0}.hero--expedition h1{font-size:clamp(28px,7.6vw,36px);letter-spacing:-.05em}.hero--expedition h1 em{font-size:1.42em}.hero--expedition .expedition-eyebrow{font-size:9px;letter-spacing:.14em}.hero--expedition .expedition-lead{font-size:16px!important;white-space:nowrap}.hero--expedition .expedition-actions{gap:10px}.hero--expedition .expedition-actions button{font-size:14px;gap:10px;padding:12px;min-height:49px}.hero--expedition .expedition-primary span{width:23px;height:23px}.hero--expedition .expedition-art-note{left:20px;bottom:198px;font-size:11px;gap:9px}.hero--expedition .expedition-art-note span{padding-left:9px}.hero--expedition .expedition-bottom{left:20px;right:20px}.hero--expedition .expedition-stats b{font-size:40px}.hero--expedition .expedition-stats span{font-size:12px}}
+@media(max-width:360px){.atlas-immersive .hdr-in{padding-left:13px;padding-right:13px}.atlas-immersive .brand-txt b{font-size:19px}.atlas-immersive .nav a{font-size:13px;padding:8px 3px}.atlas-immersive .nav .nav-add{padding:8px 5px;font-size:13px}.hero--expedition .expedition-copy{padding-left:16px}.hero--expedition .expedition-actions button{font-size:13px;padding:11px 9px;gap:8px}.hero--expedition .expedition-lead{font-size:15px!important}}
+@media(prefers-reduced-motion:reduce){.hero--expedition .expedition-actions button{transition:none}}
+
+/* 地图与关系图展开到视窗宽度。 */
+.atlas-immersive .field-map,.atlas-immersive .method-map{padding:68px 0;scroll-margin-top:115px;background:#071b20}
+.atlas-immersive .field-map>.wrap,.atlas-immersive .method-map>.wrap{width:100%;max-width:none;margin:0;padding:0 4vw}
+.atlas-immersive .field-head h2,.atlas-immersive .method-map-heading h2{color:#f0f3de;font-size:clamp(28px,2.5vw,57px)}
+.atlas-immersive .field-overline{color:#bcda9f;font-size:13px;letter-spacing:.15em}
+.atlas-immersive .field-pills span{background:transparent;border-color:#9ab58a55;color:#c5d7ba}
+.atlas-immersive .field-board{border-radius:0;border-color:#8ca47e55;box-shadow:none}
+.atlas-immersive .field-illustration{height:clamp(300px,26vw,650px)}
+.atlas-immersive .field-groups{background:#102d2c}
+.atlas-immersive .field-group{border-color:#a1c28626;padding:30px 24px}
+.atlas-immersive .field-group-head h3{color:#e4eecf;font-size:clamp(21px,1.6vw,33px)}
+.atlas-immersive .field-group-head span{color:#b8e480}
+.atlas-immersive .field-links a{background:#173a32;border-color:#9fbe862e;border-radius:0;color:#d9e7ce;font-size:clamp(17px,1.15vw,24px);min-height:58px}
+.atlas-immersive .field-links a span{color:#ff9a50}
+.atlas-immersive .field-links a:hover,.atlas-immersive .field-links a:focus-visible{background:#ff9a50;color:#142918;border-color:#ff9a50}
+.atlas-immersive .field-links a:hover span{color:#142918}
+.atlas-immersive .field-group.field-active{background:#25473a;box-shadow:inset 0 4px #ff9a50}
+.atlas-immersive .method-flow-layout{border-radius:0}
+.atlas-immersive .flow-reset{border-radius:0;background:#ff9a50;color:#18352a;border-color:#ff9a50}
+
+
+@media(max-width:800px){.atlas-immersive .field-map,.atlas-immersive .method-map{padding:40px 0;scroll-margin-top:170px}.atlas-immersive .field-map>.wrap,.atlas-immersive .method-map>.wrap{padding:0 20px}.atlas-immersive .field-head h2,.atlas-immersive .method-map-heading h2{font-size:29px}.atlas-immersive .field-group{padding:20px 15px}.atlas-immersive .field-illustration{height:260px}.atlas-immersive .field-links a{font-size:17px}}
+@media(max-width:480px){.atlas-immersive .field-head h2,.atlas-immersive .method-map-heading h2{font-size:26px}.atlas-immersive .field-illustration{height:210px}}
+
+@keyframes expedition-enter{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.hero--expedition .expedition-copy{animation:none}}

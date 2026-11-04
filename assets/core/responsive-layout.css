@@ -1,0 +1,30 @@
+/* 首屏的构图基准为1920px；背景铺满，内容、导航和图形共享缩放尺度。 */
+:root{--atlas-scale:1;--atlas-page-width:100vw;--atlas-page-height:100svh;--atlas-inset:3.5vw;--atlas-content-inset:3.5vw}
+body{zoom:var(--atlas-scale)}
+html.atlas-scaled{--type-brand:29px;--type-nav:22px;--type-section:32px}
+.hdr .hdr-in{padding-inline:var(--atlas-inset)}
+.atlas-immersive .field-map>.wrap,.atlas-immersive .method-map>.wrap{padding-inline:var(--atlas-inset)}
+.hero--expedition .expedition-hero.hero-main{height:clamp(660px,calc(var(--atlas-page-height) - 104px),800px);min-height:0;max-height:800px}
+.hero--expedition .expedition-copy{width:52%;max-width:none;padding:clamp(50px,calc(var(--atlas-page-height)*.08),86px) 0 145px var(--atlas-content-inset)}
+.hero--expedition h1{font-size:clamp(54px,calc(var(--atlas-page-width)*.044),86px);line-height:1.18}
+.hero--expedition h1 em{font-size:1.35em;line-height:1.14}
+.hero--expedition .expedition-eyebrow{font-size:14px;letter-spacing:.14em;margin-bottom:28px}
+.hero--expedition .expedition-lead{font-size:20px!important;margin-top:24px}
+.hero--expedition .expedition-actions{margin-top:28px}
+.hero--expedition .expedition-actions button{font-size:18px;min-height:60px;gap:25px}
+.hero--expedition .expedition-art-note{right:var(--atlas-content-inset);top:24px;font-size:15px}
+.hero--expedition .expedition-signal{right:var(--atlas-content-inset);bottom:155px;font-size:18px}
+.hero--expedition .expedition-bottom{left:var(--atlas-content-inset);right:var(--atlas-content-inset);bottom:26px;padding-top:22px}
+.hero--expedition .expedition-stats{gap:62px}
+.hero--expedition .expedition-stats b{font-size:54px}
+.hero--expedition .expedition-stats span{font-size:17px}
+.hero--expedition .expedition-motion{font-size:16px}
+@media(max-width:1100px){.hero--expedition .expedition-copy{width:65%}.hero--expedition h1{font-size:clamp(44px,calc(var(--atlas-page-width)*.052),58px)}.hero--expedition .expedition-stats{gap:32px}}
+@media(max-width:800px){.hero--expedition .expedition-hero.hero-main{height:850px;min-height:850px;max-height:none}.hero--expedition .expedition-copy{width:100%;padding:36px 24px 0}.hero--expedition h1{font-size:clamp(35px,calc(var(--atlas-page-width)*.071),56px)}.hero--expedition h1 em{font-size:1.4em}.hero--expedition .expedition-eyebrow{font-size:11px;margin-bottom:25px}.hero--expedition .expedition-lead{font-size:18px!important;margin-top:22px}.hero--expedition .expedition-actions{margin-top:24px;gap:12px}.hero--expedition .expedition-actions button{font-size:16px;gap:17px;min-height:52px}.hero--expedition .expedition-art-note{top:auto;bottom:195px;left:24px;right:auto;font-size:13px}.hero--expedition .expedition-bottom{left:24px;right:24px;bottom:26px;padding-top:22px}.hero--expedition .expedition-stats{gap:16px}.hero--expedition .expedition-stats b{font-size:40px}.hero--expedition .expedition-stats span{font-size:14px}.hero--expedition .expedition-motion{font-size:14px}}
+@media(max-width:480px){.hero--expedition .expedition-copy{padding:32px 20px 0}.hero--expedition h1{font-size:clamp(28px,calc(var(--atlas-page-width)*.086),38px)}.hero--expedition h1 em{font-size:1.42em}.hero--expedition .expedition-eyebrow{font-size:10px;letter-spacing:.10em}.hero--expedition .expedition-lead{font-size:17px!important}.hero--expedition .expedition-actions button{font-size:14px;padding:12px;gap:10px;min-height:49px}.hero--expedition .expedition-stats b{font-size:36px}.hero--expedition .expedition-stats span{font-size:13px}.hero--expedition .expedition-art-note{left:20px;font-size:12px}.hero--expedition .expedition-bottom{left:20px;right:20px}}
+@media(max-width:360px){.hero--expedition .expedition-actions button{font-size:13px;padding:11px 9px;gap:8px}}
+
+html.atlas-compact .hero--expedition .expedition-copy{padding-top:36px}
+html.atlas-compact .hero--expedition h1{font-size:clamp(44px,calc(var(--atlas-page-width)*.04),70px)}
+html.atlas-compact .hero--expedition .expedition-eyebrow{margin-bottom:20px}
+html.atlas-compact .hero--expedition .expedition-stats b{font-size:44px}

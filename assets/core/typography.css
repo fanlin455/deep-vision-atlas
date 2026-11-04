@@ -1,0 +1,62 @@
+/* 统一阅读层级；地图文字由其 ResizeObserver 抵消 SVG 整体缩放。 */
+:root{--nav-h:104px;--type-body:17px;--type-small:14px;--type-control:17px;--type-nav:clamp(20px,1.15vw,28px);--type-brand:clamp(26px,1.5vw,38px);--type-section:clamp(28px,1.7vw,36px);--type-map-label:20px}
+body.atlas-immersive{--nav-h:104px}
+body{font-size:var(--type-body);line-height:1.75}
+.hdr .hdr-in{min-height:104px;height:auto;gap:24px;width:100%;max-width:none;padding:15px 3.5vw}
+.hdr .brand{gap:13px}
+.hdr .brand-mark{width:44px;height:44px;flex-shrink:0}
+.hdr .brand-txt b{font-size:var(--type-brand);line-height:1.25;font-weight:750}
+.hdr .brand-txt span{font-size:12px;line-height:1.4;letter-spacing:.18em;margin-top:5px}
+.hdr .nav{gap:4px}
+.hdr .nav a,.hdr .nav .nav-add{font-family:var(--sans);font-size:var(--type-nav);line-height:1.4;font-weight:550;padding:11px 13px}
+.hdr .nav a.on{font-weight:750}
+.hdr .nav .nav-add{margin-left:8px;padding:12px 18px}
+.atlas-immersive .hdr .brand-txt b{font-size:var(--type-brand)}
+.atlas-immersive .hdr .nav a,.atlas-immersive .hdr .nav .nav-add{font-size:var(--type-nav)}
+.hero--expedition h1{font-size:clamp(54px,4.4vw,86px);line-height:1.18}
+.hero--expedition h1 em{font-size:1.35em}
+.hero--expedition .expedition-lead{font-size:20px!important}
+.hero--expedition .expedition-actions button{font-size:18px}
+.hero--expedition .expedition-eyebrow{font-size:14px}
+.hero--expedition .expedition-stats b{font-size:54px}
+.hero--expedition .expedition-stats span{font-size:17px}
+.hero--expedition .expedition-art-note,.hero--expedition .expedition-motion{font-size:15px}
+.hero--expedition .expedition-signal{font-size:18px}
+.atlas-immersive .field-map .field-head h2,.atlas-immersive .method-map-heading h2{font-size:var(--type-section);line-height:1.35}
+.atlas-immersive .field-overline{font-size:14px;letter-spacing:.12em}
+.field-map-tools button,.flow-reset{font-size:16px}
+.fm-zone-tabs button{font-size:18px}
+.fm-zone-tabs button>span,.fm-zone-tabs button>b{font-size:14px}
+.fm-map-footer{font-size:15px}
+.method-map-heading p,.method-flow-figure figcaption{font-size:15px!important}
+.method-flow-detail .flow-selection-title h3{font-size:23px}
+.method-flow-detail .flow-selection-title>b{font-size:36px}
+.method-flow-detail .flow-selection-title>span,.method-flow-detail .flow-selection-title small{font-size:15px}
+.method-flow-detail .flow-scene-list h4{font-size:17px}
+.method-flow-detail .flow-scene-list li{font-size:17px!important;line-height:1.7}
+.page-head h1,.dh-title{font-size:36px;line-height:1.3}
+.page-head .blurb,.blurb,.lede{font-size:17px;line-height:1.8}
+.sec-head h2,.submission-guide h2{font-size:28px}
+.scene-row h3,.mcard h3,.flow-card h3{font-size:22px;line-height:1.5}
+.scene-row p,.mcard p,.submission-guide p,.submission-guide li{font-size:16px;line-height:1.8}
+.tabs button,.btn,.case-filter input,.case-filter select{font-size:16px;line-height:1.5}
+.case-filter label,.case-filter .muted,.sys-table th{font-size:14px}
+.sys-table{font-size:16px;line-height:1.65}
+.sys-table td{font-size:16px}
+.sys-table td small,.sys-table .muted{font-size:14px}
+.sys-table .btn,.sys-table button{font-size:14px}
+.panel>p,.panel>ul,.panel>ol{font-size:17px;line-height:1.85}
+.panel .prose,.panel .prose p,.panel .prose li{font-size:17px;line-height:1.85}
+.caption,.small,.meta,.dh-meta{font-size:14px}
+.ftr{font-size:14px}
+@media(min-width:1920px){:root{--type-map-label:22px}}
+@media(max-width:1100px){:root,body.atlas-immersive{--nav-h:150px}.hdr .hdr-in{flex-wrap:wrap;gap:13px}.hdr .brand-txt b{font-size:26px}.hdr .nav{margin-left:0;width:100%;max-width:100%;flex-basis:100%;justify-content:flex-start;gap:10px;overflow-x:auto;padding:2px 0 7px;scrollbar-width:thin}.hdr .nav>*{flex-shrink:0}.hdr .nav a,.hdr .nav .nav-add,.atlas-immersive .hdr .nav a,.atlas-immersive .hdr .nav .nav-add{font-size:18px}.hdr .nav a:not(.nav-keep){display:block}.hdr .nav .nav-sep{display:none}.hero--expedition h1{font-size:5.2vw}.hero--expedition h1 em{font-size:1.35em}}
+@media(max-width:800px){:root{--type-body:16px;--type-control:16px;--type-section:27px;--type-map-label:18px}.hdr .hdr-in{padding:14px 20px 8px;gap:12px}.hdr .brand-txt b,.atlas-immersive .hdr .brand-txt b{font-size:23px}.hdr .brand-mark{width:38px;height:38px}.hdr .brand-txt span{font-size:11px}.hdr .nav{gap:6px}.hdr .nav a,.hdr .nav .nav-add,.atlas-immersive .hdr .nav a,.atlas-immersive .hdr .nav .nav-add{font-size:16px;padding:9px 10px}.hdr .nav .nav-add{margin-left:0}.hero--expedition h1{font-size:clamp(33px,7.1vw,56px)}.hero--expedition h1 em{font-size:1.4em}.hero--expedition .expedition-lead{font-size:18px!important}.hero--expedition .expedition-actions button{font-size:16px}.hero--expedition .expedition-stats b{font-size:40px}.hero--expedition .expedition-stats span{font-size:14px}.hero--expedition .expedition-eyebrow{font-size:11px}.hero--expedition .expedition-art-note{font-size:13px}.hero--expedition .expedition-motion{font-size:14px}.fm-zone-tabs button{font-size:17px}.page-head h1,.dh-title{font-size:30px}.scene-row h3,.mcard h3{font-size:21px}.sec-head h2{font-size:25px}.atlas-immersive .field-map,.atlas-immersive .method-map{scroll-margin-top:175px}}
+@media(max-width:480px){:root{--type-section:24px}.hdr .brand-txt b,.atlas-immersive .hdr .brand-txt b{font-size:21px}.hdr .nav a,.hdr .nav .nav-add,.atlas-immersive .hdr .nav a,.atlas-immersive .hdr .nav .nav-add{font-size:16px;padding:8px}.hero--expedition h1{font-size:clamp(28px,7.6vw,36px)}.hero--expedition h1 em{font-size:1.42em}.hero--expedition .expedition-lead{font-size:16px!important}.hero--expedition .expedition-actions button{font-size:14px}.hero--expedition .expedition-stats b{font-size:36px}.hero--expedition .expedition-stats span{font-size:13px}.hero--expedition .expedition-eyebrow{font-size:10px}.hero--expedition .expedition-art-note{font-size:12px}.fm-map-footer{font-size:14px}.field-map-tools button{font-size:15px}.fm-zone-tabs button{font-size:16px}}
+@media(max-width:360px){:root{--type-section:22px}.hdr .hdr-in{padding-left:13px;padding-right:13px}.hdr .brand-txt b,.atlas-immersive .hdr .brand-txt b{font-size:19px}.hdr .brand{gap:9px}.hdr .brand-txt span{font-size:10px}.hdr .nav a,.hdr .nav .nav-add,.atlas-immersive .hdr .nav a,.atlas-immersive .hdr .nav .nav-add{font-size:15px;padding:8px}.hero--expedition .expedition-actions button{font-size:13px}}
+
+/* 原框架的局部字号有较高优先级，这里明确统一表格与输入区。 */
+.sys-table td.id,.sys-table td.nm{font-size:16px}
+.sys-table td.sc{font-size:14px}
+.case-filter input,.case-filter select{font-size:16px!important}
+.panel p,.panel li,.flow-card p{font-size:16px!important;line-height:1.85}

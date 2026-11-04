@@ -1,0 +1,37 @@
+/* 专业背景与流程：正文由图解承担，详细说明按需展开。 */
+main.scene-workspace:has(>[data-panel=bg].on .story-figure),main.scene-workspace:has(>[data-panel=flow].on .visual-workflow){width:calc(100% - 32px)}
+.scene-workspace>[data-panel=bg]:has(.story-figure),.scene-workspace>[data-panel=flow]:has(.visual-workflow){padding-inline:20px}
+.scene-workspace [data-panel=bg]:has(.story-figure)>.sec4{display:block;padding:20px 0 28px}
+.scene-workspace [data-panel=bg]:has(.story-figure)>.sec4>.sn{display:none}
+.scene-workspace .sec4:has(.story-figure) h3{font-size:25px;margin:0 0 14px;color:#e4eadd}
+.story-figure{width:100%;max-width:none;margin:16px 0!important}
+.story-scroll{scrollbar-width:thin;overscroll-behavior-inline:contain;outline-offset:4px;background:#0b2432}
+.story-scroll:focus-visible{outline:2px solid #e8b179}
+.story-figure figcaption{text-align:right;margin-top:7px;font-size:14px;line-height:1.7;color:#95b8c3}
+.scene-workspace .story-notes{margin:14px 0 0;max-width:none;width:100%;border:1px solid #315461;border-radius:4px;background:#102c3a;padding:0}
+.story-notes>summary{padding:12px 17px;font-size:15px;color:#a8c5ce;cursor:pointer}
+.story-notes[open]>summary{color:#ffca9a;border-bottom:1px solid #315461}
+.story-notes>p{font-size:16px;line-height:1.85;padding:0 18px;margin:15px 0}
+.story-notes a{color:#9bd7d3;overflow-wrap:anywhere}
+.visual-workflow{min-width:0}
+.story-flow-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;width:100%;max-width:none;margin:0 0 15px}
+.story-flow-heading h3{font-size:27px;color:#e9ecde;margin:0}
+.story-flow-heading>span{font-size:15px;color:#adc7ce}
+.story-overview{margin-bottom:27px!important}
+.visual-step-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:100%;max-width:none;margin:0 0 24px}
+.visual-step-grid>.visual-step:last-child:nth-child(odd){grid-column:1/-1}
+.visual-step{min-width:0;background:#102c3a;border:1px solid #355865;border-radius:5px;padding:18px}
+.visual-step h4{display:flex;align-items:center;gap:14px;font-size:21px;line-height:1.55;margin:0 0 17px;color:#e0e9df}
+.visual-step h4>span{font:22px/1.5 Consolas;color:#ffb77c}
+.visual-step h4>small{margin-left:auto;font-size:13px;color:#97bcc8;white-space:nowrap}
+.visual-step .story-figure{margin:0!important}
+.visual-step .story-scroll svg{min-width:660px!important}
+.visual-step .story-figure figcaption{display:none}
+.visual-step .story-notes{margin-top:12px}
+.visual-step .story-notes>summary{font-size:14px;padding:9px 12px}
+.visual-step .story-notes>p{padding:0 12px;font-size:15px}
+@media(min-width:1300px){.visual-step .story-scroll svg{min-width:0!important}}
+@media(min-width:1700px){.visual-step-grid:has(>.visual-step:nth-child(5):last-child){grid-template-columns:repeat(6,minmax(0,1fr))}.visual-step-grid:has(>.visual-step:nth-child(5):last-child)>.visual-step{grid-column:span 2}.visual-step-grid:has(>.visual-step:nth-child(5):last-child)>.visual-step:nth-child(n+4){grid-column:span 3}}
+@media(max-width:1000px){.visual-step-grid{grid-template-columns:1fr}.visual-step .story-scroll svg{min-width:660px!important}.story-flow-heading{align-items:flex-start;flex-direction:column}.story-flow-heading>span{font-size:14px}}
+@media(max-width:650px){.scene-workspace .sec4:has(.story-figure) h3{font-size:23px}.visual-step{padding:14px}.visual-step h4{font-size:19px;flex-wrap:wrap;gap:8px}.visual-step h4>small{font-size:12px}.story-figure figcaption{font-size:12px;text-align:left}.story-scroll:after{content:'↔ 横向滑动查看完整图解';display:block;font-size:13px;color:#91b9c4;padding:8px}.visual-step-grid{gap:14px}.story-flow-heading h3{font-size:24px}.story-notes>summary{font-size:14px}}
+@media(max-width:650px){main.scene-workspace:has(>[data-panel=bg].on .story-figure),main.scene-workspace:has(>[data-panel=flow].on .visual-workflow){width:calc(100% - 20px)}.scene-workspace>[data-panel=bg]:has(.story-figure),.scene-workspace>[data-panel=flow]:has(.visual-workflow){padding-inline:12px}}

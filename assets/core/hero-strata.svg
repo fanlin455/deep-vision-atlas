@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 740" role="img" aria-label="钻井塔、井轨迹与地下地层的立体概念剖面">
+<defs>
+ <linearGradient id="top" x2="1" y2="1"><stop stop-color="#2f5d55"/><stop offset="1" stop-color="#142d32"/></linearGradient>
+ <linearGradient id="left" x2="1" y2="0"><stop stop-color="#19393e"/><stop offset="1" stop-color="#284641"/></linearGradient>
+ <linearGradient id="right" x2="0" y2="1"><stop stop-color="#376259"/><stop offset=".6" stop-color="#5d5540"/><stop offset="1" stop-color="#272f32"/></linearGradient>
+ <linearGradient id="reservoir"><stop stop-color="#bacd72" stop-opacity=".2"/><stop offset=".7" stop-color="#d5f183" stop-opacity=".7"/><stop offset="1" stop-color="#b6df55" stop-opacity=".2"/></linearGradient>
+ <radialGradient id="halo"><stop stop-color="#65c9ae" stop-opacity=".22"/><stop offset="1" stop-color="#65c9ae" stop-opacity="0"/></radialGradient>
+ <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="5"/></filter>
+ <clipPath id="cap"><path d="M170 260L565 100 905 279 510 452Z"/></clipPath>
+ <pattern id="dots" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#d5efc9" opacity=".2"/></pattern>
+</defs>
+<ellipse cx="560" cy="435" rx="430" ry="290" fill="url(#halo)"/>
+<g fill="none" stroke="#4b8e80" stroke-width="1" opacity=".25"><ellipse cx="565" cy="465" rx="368" ry="184"/><ellipse cx="565" cy="465" rx="420" ry="210"/><path d="M110 465H935M565 245V704" stroke-dasharray="3 9"/></g>
+<!-- 地层块体，两侧保持同一层界。 -->
+<path d="M170 260L510 452V685L170 493Z" fill="url(#left)" stroke="#46766b"/>
+<path d="M510 452L905 279V512L510 685Z" fill="url(#right)" stroke="#53796a"/>
+<path d="M170 307C267 338 363 434 510 498V544C390 497 275 405 170 353Z" fill="#8d7153" opacity=".5"/>
+<path d="M510 498C615 466 760 385 905 325V371C776 425 650 492 510 544Z" fill="#ac8258" opacity=".6"/>
+<path d="M170 385C291 427 387 519 510 568V591C382 542 278 461 170 409Z" fill="#b5ad65" opacity=".3"/>
+<path d="M510 568C651 528 785 449 905 412V435C774 479 646 550 510 591Z" fill="url(#reservoir)"/>
+<path d="M170 438C288 482 399 570 510 622V685L170 493Z" fill="#896b52" opacity=".4"/>
+<path d="M510 622C670 568 777 508 905 465V512L510 685Z" fill="#936746" opacity=".4"/>
+<g fill="none" stroke="#c0d9b4" stroke-width="1.4" opacity=".5"><path d="M170 307C267 338 363 434 510 498C615 466 760 385 905 325"/><path d="M170 353C275 405 390 497 510 544C650 492 776 425 905 371"/><path d="M170 385C291 427 387 519 510 568C651 528 785 449 905 412"/><path d="M170 438C288 482 399 570 510 622C670 568 777 508 905 465"/></g>
+<path d="M170 260L510 452V685L170 493ZM510 452L905 279V512L510 685Z" fill="url(#dots)" opacity=".6"/>
+<!-- 地表等高线与勘探网格。 -->
+<path d="M170 260L565 100 905 279 510 452Z" fill="url(#top)" stroke="#79a18a" stroke-width="1.5"/>
+<g clip-path="url(#cap)" fill="none" stroke="#93c6a5" opacity=".28"><ellipse cx="540" cy="274" rx="270" ry="110"/><ellipse cx="540" cy="274" rx="217" ry="87"/><ellipse cx="540" cy="274" rx="161" ry="65"/><ellipse cx="540" cy="274" rx="106" ry="43"/><path d="M180 190L650 475M260 153L730 438M340 116L810 401M420 79L890 364M500 42L970 327M160 310L750 53M240 355L830 98M320 400L910 143M400 445L990 188" stroke="#b0d2b9" opacity=".55"/></g>
+<g stroke="#a1d4b5" stroke-width="2" fill="#244a43"><circle cx="315" cy="267" r="4"/><circle cx="447" cy="213" r="4"/><circle cx="717" cy="258" r="4"/><circle cx="665" cy="346" r="4"/></g>
+<!-- 井架与作业台。 -->
+<path d="M500 248L553 224 616 257 562 282Z" fill="#365c50" stroke="#aec7a4"/>
+<g fill="none" stroke="#bdd6b4" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M524 255L560 56 596 267M542 153L579 153M548 119L573 119M554 86H567M531 212L587 175M537 176L590 226M525 247L585 212M539 154L579 120M545 120L574 89M559 56V36M549 56h22"/><path d="M560 62V250" stroke="#7cbf9c" stroke-width="1.4"/></g>
+<path d="M616 257v-34l34 18v34M651 275v-34M622 231l27 14" fill="none" stroke="#7faf95" stroke-width="2"/>
+<!-- 发光轨迹：概念示意，没有实测深度或坐标。 -->
+<path d="M560 255V475Q560 527 609 532L769 461" fill="none" stroke="#d9ff8b" stroke-width="13" opacity=".35" filter="url(#glow)"/>
+<path d="M560 255V475Q560 527 609 532L769 461" fill="none" stroke="#dcff9c" stroke-width="3.5"/>
+<path class="well-flow" d="M560 255V475Q560 527 609 532L769 461" fill="none" stroke="#fffde1" stroke-width="2" stroke-dasharray="7 22"/>
+<circle cx="769" cy="461" r="7" fill="#dbff8b"/><circle cx="769" cy="461" r="16" fill="none" stroke="#d6fb88" opacity=".6"/>
+<g fill="#ccedb1"><circle cx="315" cy="267" r="3"/><circle cx="717" cy="258" r="3"/></g>
+<style>.well-flow{animation:travel 6s linear infinite}@keyframes travel{to{stroke-dashoffset:-145}}@media(prefers-reduced-motion:reduce){.well-flow{animation:none}}</style>
+</svg>

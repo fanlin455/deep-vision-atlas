@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" role="img" aria-label="地层与井轨迹概念示意">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#173e4b"/><stop offset="1" stop-color="#102b38"/></linearGradient><linearGradient id="rock" x2="1" y2="1"><stop stop-color="#c5e3cf"/><stop offset="1" stop-color="#4f968d"/></linearGradient><pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#b8ded4" opacity=".13"/></pattern></defs>
+<rect width="760" height="520" fill="url(#bg)"/><rect width="760" height="520" fill="url(#grid)"/>
+<g fill="none" stroke="#8ec7bd" opacity=".22" stroke-width="1"><ellipse cx="505" cy="246" rx="225" ry="153"/><ellipse cx="505" cy="246" rx="188" ry="122"/><ellipse cx="505" cy="246" rx="150" ry="92"/><ellipse cx="505" cy="246" rx="112" ry="62"/></g>
+<path d="M180 280C310 205 432 244 566 182L725 220V314L561 283C439 343 316 301 180 369Z" fill="#487c7b" opacity=".75"/><path d="M180 369C316 301 439 343 561 283L725 314V378L556 349C428 411 305 374 180 437Z" fill="url(#rock)" opacity=".72"/><path d="M180 437C305 374 428 411 556 349L725 378V465L180 500Z" fill="#cd9b69" opacity=".52"/>
+<path d="M180 280C310 205 432 244 566 182L725 220M180 369C316 301 439 343 561 283L725 314M180 437C305 374 428 411 556 349L725 378" fill="none" stroke="#d8eee0" stroke-width="2" opacity=".65"/>
+<path d="M325 40V217C325 261 361 294 402 294H468C504 294 529 318 560 334" fill="none" stroke="#f4fbf0" stroke-width="4"/><path d="M325 40V217C325 261 361 294 402 294H468C504 294 529 318 560 334" fill="none" stroke="#5ce5c5" stroke-width="1.5" stroke-dasharray="6 6"/>
+<g fill="#b6f7d9" stroke="#143c42" stroke-width="3"><circle cx="325" cy="185" r="6"/><circle cx="386" cy="292" r="6"/><circle cx="503" cy="305" r="6"/><circle cx="560" cy="334" r="7"/></g>
+<g fill="#c7e4dc" font-family="sans-serif" font-size="12" letter-spacing="2"><text x="225" y="44">SUBSURFACE / 示意</text><text x="581" y="170">地层界面</text><text x="570" y="358">井轨迹</text><text x="225" y="481">概念图 · 非实际地质剖面</text></g>
+</svg>
